@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Echo Version'){
+        stage('Echo Version') {
             steps {
                 sh 'echo Print Maven Version'
                 sh 'mvn -version'
@@ -20,7 +20,7 @@ pipeline {
                sh "mvn clean package -DskipTests=true"
             }
          }
-       stage('Unit Test'){
+       stage('Unit Test') {
            steps {
                script  {
                for (int i = 0 < 60; i++) {
